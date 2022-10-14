@@ -59,7 +59,14 @@ body {
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main {
@@ -143,7 +150,7 @@ body {
   background: url("../images/content/divider.svg") no-repeat;
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
   height: 57px;
 }
@@ -389,8 +396,12 @@ body {
   align-items: center;
 }
 
-.footer-social-item + .footer-social-item {
-  margin-left: 15px;
+.footer-social-item {
+  width: 48px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
 }
 
 .social-item-vk {
@@ -445,6 +456,13 @@ body {
 .breadcrumbs {
   list-style: none;
   display: flex;
+  align-items: center;
+  margin-top: 8px;
+margin-bottom: 40px;
+}
+
+.breadcrumbs-item {
+  margin-right: 28px;
 }
 
 .breadcrumbs-link-house {
@@ -455,7 +473,7 @@ body {
   height: 12px;
 }
 
-.breadcrumbs-item::before {
+/* .breadcrumbs-item::before {
   content: "";
   background: url("../images/icons/breadcrumbs-arrow.svg") no-repeat;
   display: block;
@@ -465,11 +483,14 @@ body {
 
 .breadcrumbs-link-house:before {
   display: none;
-}
+} */
 
 .catalog-filter {
   display: flex;
   justify-content: space-between;
+}
+.catalog-filter-group {
+  border: none;
 }
 
 .catalog-filter-title {
@@ -480,6 +501,10 @@ body {
 
 .catalog-filter-list {
   list-style: none;
+}
+
+.catalog-search-item {
+  border: none;
 }
 
 .control-input {
@@ -533,7 +558,7 @@ body {
 
 .cards-view-header {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin-bottom: 40px;
 }
 
@@ -546,6 +571,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin-right: 200px;
 }
 
 .cards-view-header-sorting {
@@ -556,6 +582,12 @@ body {
   background-position: right;
   color: #333333;
   appearance: none;
+  margin-right: auto;
+}
+
+.cards-view-header-appearance .button {
+  width: 48px;
+  height: 48px;
 }
 
 .appearance-btn-cards {
@@ -655,6 +687,10 @@ body {
   background-color: #82b3d3;
 }
 
+.cards-pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .cards-pagination-item-active {
   color: #000000;
   background: #F2F2F2;
@@ -667,6 +703,13 @@ body {
 
 .cards-pagination-link {
   box-sizing: border-box;
+  display: block;
   text-decoration: none;
   color: inherit;
+  width: 60px;
+  height: 60px;
+  line-height: 36px;
+  font-weight: 700;
+  padding: 12px 10px;
+  text-align: center;
 }
