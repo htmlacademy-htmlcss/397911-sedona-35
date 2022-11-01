@@ -20,19 +20,19 @@ html {
 
 /* Reset */
 
-ul {
+body ul {
   margin: 0;
   padding: 0;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr {
+body p,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body hr {
   margin-top: 0;
   margin-bottom: 0;
 }
